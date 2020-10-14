@@ -1,0 +1,17 @@
+#!/bin/ash
+
+if [ -z "$1" ]; then
+        echo "Repository name not informed. Exiting"
+        exit 120
+fi
+
+if [ -d "/git/${1}.git" ]; then
+        echo "Repository ${1} already exists"
+        exit 121
+fi
+
+git init --bare /git/${1}.git
+
+echo "Available repos:"
+ls /git/
+

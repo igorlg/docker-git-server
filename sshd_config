@@ -1,0 +1,31 @@
+Port 22
+ListenAddress 0.0.0.0
+# Protocol 2
+
+# HostKeys for protocol version 2
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_dsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Logging
+SyslogFacility AUTH
+LogLevel INFO
+
+# Authentication:
+# LoginGraceTime 60
+# StrictModes yes
+# MaxAuthTries 3
+# MaxSessions 3
+# PasswordAuthentication no
+
+PermitRootLogin no
+ChallengeResponseAuthentication no
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+
+# Usersettings
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+

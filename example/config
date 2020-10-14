@@ -1,0 +1,8 @@
+# Example of ~/.ssh/config to use this Git Server
+
+Host nas_git_server
+	IdentityFile /Users/igorlg/.ssh/id_rsa.pem
+	User git
+	Hostname nas
+	Port 2222
+
