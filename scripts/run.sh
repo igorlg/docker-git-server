@@ -9,7 +9,7 @@ source ./scripts/vars.sh
 
 docker run \
 	--detach \
-	--rm \
+	--restart=unless-stopped \
 	--name $IMAGE_NAME \
 	--publish "$EXPOSE_SSH_PORT:22" \
 	-v "${VOLUME_DATA_PATH}:/git" \
@@ -17,7 +17,6 @@ docker run \
 	"$IMAGE_PREFIX/$IMAGE_NAME:$IMAGE_VERSION"
 
 # removed:
-#	--restart=unless-stopped \
 #	-v "${VOLUME_CONFIG_PATH}:/etc/ssh/sshd_config:ro" \
 
 docker ps -a

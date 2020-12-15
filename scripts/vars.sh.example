@@ -1,0 +1,12 @@
+IMAGE_PREFIX="__example__"
+IMAGE_NAME="git-server"
+IMAGE_VERSION="latest"
+
+CONTAINER_NAME="$IMAGE_NAME"
+EXPOSE_SSH_PORT=2222
+
+VOLUME_PREFIX="/path/to/local/data/dir"
+VOLUME_DATA_PATH="${VOLUME_PREFIX}/data"
+VOLUME_CONFIG_PATH="${VOLUME_PREFIX}/sshd_config"
+VOLUME_KEYS_PATH="${VOLUME_PREFIX}/authorized_keys"
+
