@@ -1,4 +1,4 @@
-.PHONY: build run stop clean
+.PHONY: build run stop clean test
 
 build: clean
 	./scripts/build.sh
@@ -11,4 +11,7 @@ stop:
 
 clean: stop
 	./scripts/clean.sh
+
+test:
+	@bats test/*.bats
 
