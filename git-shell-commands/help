@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if tty -s
+if tty -s >/dev/null 2>&1
 then
 	echo "Run 'help' for help, or 'exit' to leave.  Available commands:"
 else

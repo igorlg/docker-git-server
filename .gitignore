@@ -4,5 +4,9 @@
 **/id_rsa*
 authorized_keys
 
+# vim
+**/*.swp
+
+# Ignore localy defined vars file
 scripts/vars.sh
 

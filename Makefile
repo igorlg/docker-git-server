@@ -1,6 +1,6 @@
-.PHONY: build run stop clean test
+.PHONY: build run stop clean test test-local test-docker
 
-build: clean
+build: clean test
 	./scripts/build.sh
 
 run:
@@ -12,6 +12,10 @@ stop:
 clean: stop
 	./scripts/clean.sh
 
-test:
-	@bats test/*.bats
+test-local:
+	bats test/*.bats
 
+test-docker:
+	docker run --rm -v "${PWD}:/code" bats/bats code/test
+
+test: test-local test-docker
