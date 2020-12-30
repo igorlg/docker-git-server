@@ -24,7 +24,6 @@ load_lib() {
 #   1 - otherwise
 fixtures() {
   FIXTURE_ROOT="$BATS_TEST_DIRNAME/fixtures/$1"
-  RELATIVE_FIXTURE_ROOT="$(bats_trim_filename "$FIXTURE_ROOT")"
 }
 
 
@@ -33,5 +32,4 @@ fixtures() {
 load_lib bats-support
 load_lib bats-assert
 load_lib bats-file
-# load_lib bats-mock
 
