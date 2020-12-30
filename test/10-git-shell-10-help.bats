@@ -40,3 +40,9 @@ load 'test_helper'
   refute_line 'help'
 }
 
+@test "it does not show the 'vars-run.sh' command" {
+  run "${BATS_TEST_DIRNAME}/../git-shell-commands/help"
+  assert_success
+  refute_line 'vars-run.sh'
+}
+

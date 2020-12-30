@@ -10,8 +10,9 @@ if [ -d "/git/${1}.git" ]; then
         exit 121
 fi
 
-git init --bare /git/${1}.git
+git_path="${CONTAINER_GIT_PATH:-/git}"
 
-echo "Available repos:"
-ls /git/
+git init --bare ${git_path}/${1}.git
+
+$HOME/list
 

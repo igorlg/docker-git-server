@@ -19,6 +19,7 @@ RUN adduser --disabled-password --shell /usr/bin/git-shell git \
 COPY sshd_config /etc/ssh/sshd_config
 # COPY authorized_keys /home/git/.ssh/authorized_keys
 COPY git-shell-commands/ /home/git/git-shell-commands/
+COPY scripts/vars.sh /etc/profile.d/git-server-vars.sh
 
 RUN chown -Rv git:git /home/git \
 &&  chown -v git:git /git \

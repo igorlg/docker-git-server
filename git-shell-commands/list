@@ -1,5 +1,7 @@
 #!/bin/ash
 
+git_path="${CONTAINER_GIT_PATH:-/git}"
+
 echo "Available repos:"
-ls /git/
+ls $git_path/ | grep -e '.git$'
 
