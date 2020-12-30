@@ -16,6 +16,6 @@ test-local:
 	bats test/*.bats
 
 test-docker:
-	docker run --rm -v "${PWD}:/code" bats/bats code/test
+	docker run --rm -v "${PWD}:/code" git-server-test test
 
 test: test-local test-docker

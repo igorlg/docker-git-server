@@ -1,2 +1,2 @@
-# Tests are WORKING when running locally (make test-local), but not on Docker, probably because of Alpine/Busybox.
-
+# One test if failing in Docker but not locally, probably because of the ordering returned by ls. FIX THAT
+#

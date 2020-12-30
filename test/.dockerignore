@@ -1,0 +1,5 @@
+*.bats
+*.bash
+fixtures/
+test_helper/
+
